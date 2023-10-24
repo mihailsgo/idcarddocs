@@ -5,7 +5,7 @@
 - TrustLynx services should be deployed and available (at least container and archive services).
 
 ### Step 1 - Prepare client side environment, install browser plugin
-Add to your project client side plugins required by LVRTC e-paraksts plugin:
+Add to your project client side plugins required by LVRTC e-paraksts plugin (libraries could be found inside this repository):
 ```
   <script src="eparaksts-hwcrypto-legacy.js"></script>
   <script src="eparaksts-hwcrypto.js"></script>
