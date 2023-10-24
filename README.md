@@ -1,4 +1,4 @@
-# ID card signing integration with TrustLynx services and LVRTC e-paraksts browser plugin
+# ID card signing integration using TrustLynx services and LVRTC e-paraksts browser plugin
 ### Requirements
 - LVRTC e-paraksts browser plugin should be installed: https://developers.eparaksts.lv/docs/browser-extensionplugin-integration-guidelines
 - Read LVRTC e-paraksts browser plugin tech details: https://developers.eparaksts.lv/docs/client-side-browser-plugin-extension
