@@ -54,3 +54,22 @@ fetch(containerServiceAPI + "signing/ic/" + apiPath + "/" + documentIdInArchive 
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
 ```
+In response you will find value **sessionCode** that would be used in step 5.
+
+### Step 4 -  Getting signature using eparakstshwcrypto.sign
+```
+window.eparakstshwcrypto
+.sign(
+  certificate, {
+    type: 'SHA-1',
+    hex: data.hex
+}, { lang: 'en' })
+.then(function(signature) {
+    //signature - signature
+    //signature.hex - signature in hex
+}, function(error) {
+});
+```  
+Recieved value signature.hex will be used in step 5.
+### Step 5 - Finalising signing 
+
