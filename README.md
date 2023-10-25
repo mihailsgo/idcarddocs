@@ -39,8 +39,9 @@ var containerServiceAPI = 'https://[YOUR_DOMAIN]:8092/api/'; //dmss-container-an
 var documentIdInArchive = 'XXXXXX'; //document ID in archive dmss-archive-services
 var isDocumentPDF = false; //for PDF and container API address is a bit different
 var apiPath = (isDocumentPDF) ? 'pdf' : 'container'; //based on a document type API path is adjusted
+var certHex = "XXXXX"; //certificate hex value from Step 2
 
-formdata.append("certInHex", "");
+formdata.append("certInHex", certHex);
 formdata.append("signatureProfile", "LT");
 
 var requestOptions = {
