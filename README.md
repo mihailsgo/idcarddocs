@@ -24,11 +24,11 @@ window.eparakstshwcrypto.getCertificate({ lang: 'en' })
 ### Step 3 - Call TrustLynx dmss-container-and-signature-service API for hash generation
 Call **dmss-container-and-signature-services** API based on a document type you prefer to sign (.PDF / .ASICE container)
 
-For PDF (more info about API [here](https://developer.signingservices.io/api/dmss-container-and-signature-services#tag/id-card-sign-controller/operation/generateHashForPDFExistingEndpoint))
+For PDF ([API schema](https://developer.signingservices.io/api/dmss-container-and-signature-services#tag/id-card-sign-controller/operation/generateHashForPDFExistingEndpoint))
 ```
 /api/signing/ic/pdf/{id}/generateHash
 ```
-For ASICE container (more info about API [here](https://developer.trustlynx.com/api/dmss-container-and-signature-services#tag/id-card-sign-controller/operation/generateHashForExistingEndpoint)) 
+For ASICE container ([API schema](https://developer.trustlynx.com/api/dmss-container-and-signature-services#tag/id-card-sign-controller/operation/generateHashForExistingEndpoint)) 
 ```
 /api/signing/ic/container/{id}/generateHash
 ```
@@ -73,7 +73,7 @@ window.eparakstshwcrypto
 Recieved value **signature.hex** will be used in step 5.
 ### Step 5 - Call TrustLynx dmss-container-and-signature-service API for signing finalisation
 
-For PDF (more info about API [here](https://developer.signingservices.io/api/dmss-container-and-signature-services#tag/id-card-sign-controller/operation/signPDF_3))
+For PDF ([API schema])(https://developer.signingservices.io/api/dmss-container-and-signature-services#tag/id-card-sign-controller/operation/signPDF_3))
 ```
 /api/signing/ic/pdf/{sessionId}/sign
 ```
