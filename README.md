@@ -23,6 +23,7 @@ window.eparakstshwcrypto.getCertificate({ lang: 'en' })
 ```
 ### Step 3 - Call TrustLynx dmss-container-and-signature-service API for hash generation
 Call **dmss-container-and-signature-services** API based on a document type you prefer to sign (.PDF / .ASICE container)
+
 For PDF
 ```
 /api/signing/ic/pdf/{id}/generateHash
