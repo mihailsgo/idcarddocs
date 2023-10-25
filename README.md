@@ -70,6 +70,36 @@ window.eparakstshwcrypto
 }, function(error) {
 });
 ```  
-Recieved value signature.hex will be used in step 5.
-### Step 5 - Finalising signing 
+Recieved value **signature.hex** will be used in step 5.
+### Step 5 - Call TrustLynx dmss-container-and-signature-service API for signing finalisation
+
+For PDF
+```
+/api/signing/ic/pdf/{sessionId}/sign
+```
+For ASICE
+```
+/api/signing/ic/container/{sessionId}/sign
+```
+JS fetch-based example
+```
+var formdata = new FormData();
+var signatureInHex = "XXXXXX"; //signature.hex value from step 4
+var sessionCode = "YYYYYY"; //sessionCode value from step 3
+var isDocumentPDF = false; //for PDF and container API address is a bit different
+var apiPath = (isDocumentPDF) ? 'pdf' : 'container'; //based on a document type API path is adjusted
+var containerServiceAPI = 'https://[YOUR_DOMAIN]:8092/api/'; //dmss-container-and-signature-service api URL
+
+formdata.append("signatureInHex", "23432423423");
+
+var requestOptions = {
+  method: 'POST',
+  body: formdata
+};
+
+fetch(containerServiceAPI + "signing/ic/" + apiPath + "/" + sessionCode  + "/sign", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+```
 
