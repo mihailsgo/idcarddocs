@@ -73,7 +73,7 @@ window.eparakstshwcrypto
 Recieved value **signature.hex** will be used in step 5.
 ### Step 5 - Call TrustLynx dmss-container-and-signature-service API for signing finalisation
 
-For PDF ([API schema])(https://developer.signingservices.io/api/dmss-container-and-signature-services#tag/id-card-sign-controller/operation/signPDF_3))
+For PDF ([API schema](https://developer.signingservices.io/api/dmss-container-and-signature-services#tag/id-card-sign-controller/operation/signPDF_3))
 ```
 /api/signing/ic/pdf/{sessionId}/sign
 ```
