@@ -54,7 +54,7 @@ fetch(containerServiceAPI + "signing/ic/" + apiPath + "/" + documentIdInArchive 
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
 ```
-In response you will find value **sessionCode** that would be used in step 5.
+In result you will find value **sessionCode** that would be used in step 5.
 
 ### Step 4 -  Getting signature using eparakstshwcrypto.sign
 ```
