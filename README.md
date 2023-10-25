@@ -25,10 +25,30 @@ window.eparakstshwcrypto.getCertificate({ lang: 'en' })
 Call **dmss-container-and-signature-services** API based on a document type you prefer to sign (.PDF / .ASICE container)
 For PDF
 ```
-/api/signing/ic/container/{id}/generateHash
+/api/signing/ic/pdf/{id}/generateHash
 ```
 For ASICE container
 ```
 /api/signing/ic/container/{id}/generateHash
 ```
-Where **id** is document id from TrustLynx **dmss-archive-services** service
+JS fetch-based example
+```
+var formdata = new FormData();
+var containerServiceAPI = 'https://[YOUR_DOMAIN]:8092/api/'; //dmss-container-and-signature-service api URL
+var documentIdInArchive = 'XXXXXX'; //document ID in archive dmss-archive-services
+var isDocumentPDF = false; //for PDF and container API address is a bit different
+var apiPath = (isDocumentPDF) ? 'pdf' : 'container'; //based on a document type API path is adjusted
+
+formdata.append("certInHex", "");
+formdata.append("signatureProfile", "LT");
+
+var requestOptions = {
+  method: 'POST',
+  body: formdata
+};
+
+fetch(containerServiceAPI + "signing/ic/" + apiPath + "/" + documentIdInArchive + "/generateHash", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+```
