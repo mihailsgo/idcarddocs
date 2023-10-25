@@ -90,7 +90,7 @@ var isDocumentPDF = false; //for PDF and container API address is a bit differen
 var apiPath = (isDocumentPDF) ? 'pdf' : 'container'; //based on a document type API path is adjusted
 var containerServiceAPI = 'https://[YOUR_DOMAIN]:8092/api/'; //dmss-container-and-signature-service api URL
 
-formdata.append("signatureInHex", "23432423423");
+formdata.append("signatureInHex", signatureInHex);
 
 var requestOptions = {
   method: 'POST',
