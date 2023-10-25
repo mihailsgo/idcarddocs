@@ -102,4 +102,7 @@ fetch(containerServiceAPI + "signing/ic/" + apiPath + "/" + sessionCode  + "/sig
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
 ```
-
+In result string you could overview the result of signing procedure. For instance
+```
+"result": "SIGNING_COMPLETED"
+```
