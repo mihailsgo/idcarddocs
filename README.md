@@ -77,7 +77,7 @@ For PDF ([API schema])(https://developer.signingservices.io/api/dmss-container-a
 ```
 /api/signing/ic/pdf/{sessionId}/sign
 ```
-For ASICE container (more info about API [here](https://developer.signingservices.io/api/dmss-container-and-signature-services#tag/id-card-sign-controller/operation/signContainer_4)) 
+For ASICE container ([Api schema](https://developer.signingservices.io/api/dmss-container-and-signature-services#tag/id-card-sign-controller/operation/signContainer_4)) 
 ```
 /api/signing/ic/container/{sessionId}/sign
 ```
