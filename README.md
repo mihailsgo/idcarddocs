@@ -3,6 +3,7 @@
 - LVRTC e-paraksts browser plugin should be installed: https://developers.eparaksts.lv/docs/browser-extensionplugin-integration-guidelines
 - Read LVRTC e-paraksts browser plugin tech details: https://developers.eparaksts.lv/docs/client-side-browser-plugin-extension
 - TrustLynx services should be deployed and available (at least container and archive services).
+- Instructions assume that you have already added document into archive.
 
 ### Step 1 - Prepare client side environment, install browser plugin
 Add to your project client side plugins required by LVRTC e-paraksts plugin (libraries could be found inside this repository):
